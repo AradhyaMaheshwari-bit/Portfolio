@@ -11,11 +11,11 @@ export function FeaturedProject({ project, reverse = false }: Props) {
   return (
     <article
       data-reveal
-      className="surface relative overflow-hidden p-5 transition-colors hover:border-[color:var(--color-border-strong)] md:p-7"
+      className="surface relative overflow-hidden p-5 transition-colors hover:border-[color:var(--color-border-strong)] md:p-6"
     >
       <div
         className={
-          'grid gap-6 md:grid-cols-2 md:items-center md:gap-8 ' +
+          'grid gap-6 md:grid-cols-2 md:items-center md:gap-7 ' +
           (reverse ? 'md:[&>*:first-child]:order-2' : '')
         }
       >
@@ -47,12 +47,12 @@ export function FeaturedProject({ project, reverse = false }: Props) {
           </h3>
 
           {project.context && (
-            <p className="mt-3 text-sm leading-relaxed text-[color:var(--color-text-dim)]">
+            <p className="mt-2.5 text-sm leading-relaxed text-[color:var(--color-text-dim)]">
               {project.context}
             </p>
           )}
 
-          <ul className="mt-5 space-y-2 text-sm text-[color:var(--color-text-dim)]">
+          <ul className="mt-4 space-y-1.5 text-sm text-[color:var(--color-text-dim)]">
             {project.highlights.map((h) => (
               <li key={h} className="flex gap-2.5">
                 <span
@@ -64,7 +64,7 @@ export function FeaturedProject({ project, reverse = false }: Props) {
             ))}
           </ul>
 
-          <div className="mt-5 flex flex-wrap gap-1.5">
+          <div className="mt-4 flex flex-wrap gap-1.5">
             {project.stack.map((s) => (
               <span key={s} className="chip">
                 {s}
@@ -73,12 +73,12 @@ export function FeaturedProject({ project, reverse = false }: Props) {
           </div>
 
           {project.repo && (
-            <div className="mt-6 flex items-center gap-4 text-sm">
+            <div className="mt-5 flex items-center gap-4 text-sm">
               <a
                 href={project.repo}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-1.5 rounded-md border border-[color:var(--color-border-strong)] bg-[color:var(--color-surface-2)] px-3 py-1.5 text-[color:var(--color-text)] transition-colors hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+                className="inline-flex items-center gap-1.5 rounded-md border border-[color:var(--color-border-strong)] bg-[color:var(--color-surface-2)] px-3 py-1.5 text-[13px] text-[color:var(--color-text)] transition-colors hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
               >
                 <svg
                   width="14"

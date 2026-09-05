@@ -51,7 +51,7 @@ export function Contact() {
   return (
     <Section id="contact" eyebrow="Contact" title="Tell me what you're working on">
       <div className="grid gap-8 md:grid-cols-5">
-        <div className="md:col-span-2 space-y-5 text-sm text-[color:var(--color-text-dim)]">
+        <div className="md:col-span-2 space-y-4 text-sm text-[color:var(--color-text-dim)]">
           <p>
             The fastest way to reach me is email. I read every message and reply
             within a day or two.
@@ -95,7 +95,7 @@ export function Contact() {
         <form
           onSubmit={onSubmit}
           noValidate
-          className="md:col-span-3 surface space-y-4 p-5"
+          className="md:col-span-3 surface space-y-3.5 p-5"
           aria-label="Contact form"
         >
           <div>
@@ -108,7 +108,7 @@ export function Contact() {
               autoComplete="name"
               value={form.name}
               onChange={onChange('name')}
-              className="mt-1.5 w-full rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-bg-soft)] px-3 py-2 text-sm text-[color:var(--color-text)] outline-none focus:border-[color:var(--color-accent)]"
+              className="mt-1.5 w-full rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-bg-soft)] px-3 py-2 text-sm text-[color:var(--color-text)] outline-none transition-colors focus:border-[color:var(--color-accent)]"
               aria-invalid={Boolean(errors.name)}
               aria-describedby={errors.name ? 'name-error' : undefined}
             />
@@ -128,7 +128,7 @@ export function Contact() {
               autoComplete="email"
               value={form.email}
               onChange={onChange('email')}
-              className="mt-1.5 w-full rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-bg-soft)] px-3 py-2 text-sm text-[color:var(--color-text)] outline-none focus:border-[color:var(--color-accent)]"
+              className="mt-1.5 w-full rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-bg-soft)] px-3 py-2 text-sm text-[color:var(--color-text)] outline-none transition-colors focus:border-[color:var(--color-accent)]"
               aria-invalid={Boolean(errors.email)}
               aria-describedby={errors.email ? 'email-error' : undefined}
             />
@@ -144,10 +144,10 @@ export function Contact() {
             </label>
             <textarea
               id="message"
-              rows={5}
+              rows={4}
               value={form.message}
               onChange={onChange('message')}
-              className="mt-1.5 w-full resize-y rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-bg-soft)] px-3 py-2 text-sm text-[color:var(--color-text)] outline-none focus:border-[color:var(--color-accent)]"
+              className="mt-1.5 w-full resize-y rounded-md border border-[color:var(--color-border)] bg-[color:var(--color-bg-soft)] px-3 py-2 text-sm text-[color:var(--color-text)] outline-none transition-colors focus:border-[color:var(--color-accent)]"
               aria-invalid={Boolean(errors.message)}
               aria-describedby={errors.message ? 'message-error' : undefined}
             />
@@ -157,7 +157,7 @@ export function Contact() {
               </p>
             )}
           </div>
-          <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center justify-between gap-3 pt-1">
             <p className="text-xs text-[color:var(--color-text-muted)]" role="status" aria-live="polite">
               {sent ? 'Opened your email client. Send it from there to reach me.' : ' '}
             </p>

@@ -40,7 +40,7 @@ export function WhyMe() {
             key={p.title}
             data-reveal
             data-reveal-delay={String((i % 4) + 1)}
-            className="group relative surface p-5 transition-colors hover:border-[color:var(--color-border-strong)]"
+            className="group relative flex h-full flex-col surface p-5 transition-colors hover:border-[color:var(--color-border-strong)]"
           >
             <span
               aria-hidden="true"

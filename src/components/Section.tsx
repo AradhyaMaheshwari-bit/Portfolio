@@ -6,7 +6,7 @@ type Props = {
   eyebrow?: string;
   children: ReactNode;
   className?: string;
-  /** Override the default vertical padding. Use for sections that need extra room. */
+  /** Top and bottom padding rhythm. Defaults to `default`. */
   spacing?: 'default' | 'tight' | 'loose';
 };
 
@@ -34,7 +34,7 @@ export function Section({
         className
       }
     >
-      <header className="mb-8 max-w-2xl md:mb-10">
+      <header className="mb-7 max-w-2xl md:mb-9">
         {eyebrow && (
           <p className="mb-2 text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-accent)]">
             {eyebrow}

@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative scroll-mt-24 mx-auto w-full max-w-6xl px-5 pt-28 pb-20 md:pt-36 md:pb-24"
+      className="relative scroll-mt-24 mx-auto w-full max-w-6xl px-5 pt-24 pb-12 md:pt-32 md:pb-16"
     >
       {/* Background wash — restrained */}
       <div
@@ -56,7 +56,7 @@ export function Hero() {
       <p
         data-reveal
         data-reveal-delay="2"
-        className="mt-6 max-w-2xl text-pretty text-base leading-relaxed text-[color:var(--color-text-dim)] md:text-lg"
+        className="mt-5 max-w-2xl text-pretty text-[15px] leading-relaxed text-[color:var(--color-text-dim)] md:text-base"
       >
         I'm <span className="text-[color:var(--color-text)]">{profile.name}</span>, a BCA student
         working across Python, TypeScript, and SQL. I like the part of software
@@ -84,7 +84,7 @@ export function Hero() {
       <div
         data-reveal
         data-reveal-delay="4"
-        className="mt-9 flex flex-wrap items-center gap-3"
+        className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-3"
       >
         <a
           href="#projects"
@@ -98,13 +98,18 @@ export function Hero() {
         >
           Get in touch
         </a>
+        <span
+          aria-hidden="true"
+          className="hidden h-4 w-px bg-[color:var(--color-border-strong)] sm:inline-block"
+        />
         <a
           href={profile.github}
           target="_blank"
           rel="noreferrer noopener"
-          className="text-sm text-[color:var(--color-text-dim)] underline-offset-4 hover:text-[color:var(--color-text)] hover:underline"
+          className="inline-flex items-center gap-1 text-xs text-[color:var(--color-text-dim)] underline-offset-4 transition-colors hover:text-[color:var(--color-text)] hover:underline"
         >
-          GitHub →
+          GitHub
+          <span aria-hidden="true" className="opacity-70">↗</span>
         </a>
       </div>
     </section>

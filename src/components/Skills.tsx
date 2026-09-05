@@ -22,8 +22,9 @@ export function Skills() {
       id="skills"
       eyebrow="Skills"
       title="What I work with — and how honestly I can say so"
+      spacing="tight"
     >
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         {skillGroups.map((group, i) => (
           <article
             key={group.title}
@@ -31,19 +32,19 @@ export function Skills() {
             data-reveal-delay={String((i % 4) + 1)}
             className="surface p-5"
           >
-            <header className="mb-4 flex items-baseline justify-between gap-3">
-              <h3 className="text-base font-semibold text-[color:var(--color-text)]">
+            <header className="mb-5 flex items-baseline justify-between gap-3">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.08em] text-[color:var(--color-text)]">
                 {group.title}
               </h3>
-              <p className="text-xs text-[color:var(--color-text-muted)]">{group.blurb}</p>
+              <p className="shrink-0 text-[11px] text-[color:var(--color-text-muted)]">{group.blurb}</p>
             </header>
-            <ul className="space-y-3">
+            <ul className="divide-y divide-[color:var(--color-border)]">
               {group.items.map((item) => {
                 const meta = strengthMeta[item.strength];
                 return (
                   <li
                     key={item.name}
-                    className="flex items-start justify-between gap-4 border-b border-[color:var(--color-border)] pb-3 last:border-b-0 last:pb-0"
+                    className="flex items-start justify-between gap-4 py-2.5 first:pt-0 last:pb-0"
                   >
                     <div className="min-w-0">
                       <p className="text-sm font-medium text-[color:var(--color-text)]">
