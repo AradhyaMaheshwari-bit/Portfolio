@@ -12,18 +12,26 @@ export function Services() {
   return (
     <Section
       id="services"
-      eyebrow="Services"
-      title="What I offer on Fiverr — five focused gigs"
+      eyebrow="What I can build"
+      title="Areas I work in"
     >
+      <p className="mb-8 max-w-2xl text-sm leading-relaxed text-[color:var(--color-text-dim)]">
+        These are the kinds of problems I like working on. Most of my work
+        lives at the intersection of data, automation, and small tools — not
+        in shipping a full SaaS.
+      </p>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {services.map((s) => (
+        {services.map((s, i) => (
           <article
             key={s.title}
+            data-reveal
+            data-reveal-delay={String((i % 4) + 1)}
             className="surface flex flex-col p-5 transition-colors hover:border-[color:var(--color-border-strong)]"
           >
             <h3
               className={
-                'text-base font-semibold ' + (toneClass[s.tone] ?? 'text-[color:var(--color-text)]')
+                'text-base font-semibold ' +
+                (toneClass[s.tone] ?? 'text-[color:var(--color-text)]')
               }
             >
               {s.title}

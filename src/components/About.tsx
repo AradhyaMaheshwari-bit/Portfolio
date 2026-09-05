@@ -4,7 +4,7 @@ export function About() {
   return (
     <Section id="about" eyebrow="About" title="A pragmatic builder, not a brand">
       <div className="grid gap-8 md:grid-cols-3">
-        <div className="md:col-span-2 space-y-4 text-[color:var(--color-text-dim)] leading-relaxed">
+        <div data-reveal className="md:col-span-2 space-y-4 text-[color:var(--color-text-dim)] leading-relaxed">
           <p>
             I'm a BCA student who likes the part of software where the work actually
             does something useful — cleaning a messy dataset, automating a tedious
@@ -23,7 +23,7 @@ export function About() {
             honest about what I've actually shipped, not what I'd like to ship.
           </p>
         </div>
-        <aside className="surface p-5">
+        <aside data-reveal data-reveal-delay="1" className="surface p-5">
           <h3 className="text-sm font-semibold text-[color:var(--color-text)]">Quick facts</h3>
           <dl className="mt-4 space-y-3 text-sm">
             <div className="flex items-baseline justify-between gap-3">

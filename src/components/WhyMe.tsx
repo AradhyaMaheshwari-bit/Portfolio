@@ -29,11 +29,26 @@ const points = [
 
 export function WhyMe() {
   return (
-    <Section id="why" eyebrow="Why work with me" title="Working with me, in plain terms">
+    <Section
+      id="why"
+      eyebrow="How I work"
+      title="What working with me looks like"
+    >
       <ul className="grid gap-3 md:grid-cols-2">
-        {points.map((p) => (
-          <li key={p.title} className="surface p-5">
-            <h3 className="text-sm font-semibold text-[color:var(--color-text)]">{p.title}</h3>
+        {points.map((p, i) => (
+          <li
+            key={p.title}
+            data-reveal
+            data-reveal-delay={String((i % 4) + 1)}
+            className="group relative surface p-5 transition-colors hover:border-[color:var(--color-border-strong)]"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute left-0 top-5 h-5 w-0.5 rounded-r bg-[color:var(--color-accent)] opacity-0 transition-opacity group-hover:opacity-100"
+            />
+            <h3 className="text-sm font-semibold text-[color:var(--color-text)]">
+              {p.title}
+            </h3>
             <p className="mt-1.5 text-sm leading-relaxed text-[color:var(--color-text-dim)]">
               {p.body}
             </p>

@@ -54,7 +54,7 @@ export function Navbar() {
               href="#contact"
               className="rounded-md border border-[color:var(--color-border-strong)] bg-[color:var(--color-surface-2)] px-3.5 py-1.5 text-sm text-[color:var(--color-text)] transition-colors hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
             >
-              Hire me
+              Contact
             </a>
           </li>
         </ul>
@@ -93,7 +93,7 @@ export function Navbar() {
                 onClick={() => setOpen(false)}
                 className="mt-1 inline-block rounded-md border border-[color:var(--color-border-strong)] bg-[color:var(--color-surface-2)] px-3.5 py-1.5 text-sm text-[color:var(--color-text)]"
               >
-                Hire me
+                Contact
               </a>
             </li>
           </ul>

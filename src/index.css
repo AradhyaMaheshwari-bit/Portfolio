@@ -20,7 +20,6 @@
   --radius-card: 14px;
 }
 
-/* Self-hosted-ish: rely on system stack + a tasteful monospace fallback to avoid asset weight. */
 @layer base {
   html {
     color-scheme: dark;
@@ -94,4 +93,34 @@ body::before {
 #root {
   position: relative;
   z-index: 1;
+}
+
+/* Restrained entrance animation — fade + 6px rise.
+   Triggered by data-reveal attribute, optional on the element or its parent. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: reveal 480ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+[data-reveal-delay="1"] { animation-delay: 60ms; }
+[data-reveal-delay="2"] { animation-delay: 120ms; }
+[data-reveal-delay="3"] { animation-delay: 180ms; }
+[data-reveal-delay="4"] { animation-delay: 240ms; }
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

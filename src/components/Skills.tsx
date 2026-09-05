@@ -24,8 +24,13 @@ export function Skills() {
       title="What I work with — and how honestly I can say so"
     >
       <div className="grid gap-5 md:grid-cols-2">
-        {skillGroups.map((group) => (
-          <article key={group.title} className="surface p-5">
+        {skillGroups.map((group, i) => (
+          <article
+            key={group.title}
+            data-reveal
+            data-reveal-delay={String((i % 4) + 1)}
+            className="surface p-5"
+          >
             <header className="mb-4 flex items-baseline justify-between gap-3">
               <h3 className="text-base font-semibold text-[color:var(--color-text)]">
                 {group.title}
